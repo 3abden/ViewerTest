@@ -1,0 +1,57 @@
+<head>
+    <title>OctoHedz</title>
+    <meta name="title" content="OctoHedz 🐙">
+    <meta name="description" content="Invade !">
+    <meta property="og:type" content="website">
+    <link rel="icon shortcut" href="/logo192.png" type="image/x-icon">
+    <link rel="icon" href="/logo192.png" type="image/x-icon">
+    <link rel="stylesheet" href="/Loading.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link href="tailwind.min.css" rel="stylesheet" />
+    <script type="module" src="/main.js"></script>
+
+    <style>
+        body {
+            margin: 0
+        }
+
+        #viewer {
+            height: 100vh;
+            width: 100vw
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="loader">
+        <div id="spinner">
+            <img src="https://gateway.pinata.cloud/ipfs/QmWDUYmBPFGHaxWvyCZhzz3arwDvMHJ9jDYxtsP1r2TbEk"/>
+            <div class="square" id="s0"></div>
+            <div class="square" id="s1"></div>
+            <div class="square" id="s2"></div>
+            <div class="square" id="s3"></div>
+            <div class="square" id="s4"></div>
+            <div class="square" id="s5"></div>
+            <div class="square" id="s6"></div>
+            <div class="square" id="s7"></div>
+            <div class="square" id="s8"></div>
+        </div>
+    </div>
+    <script>
+      function changeColor() {
+        var x = document.getElementById("colorPicker").value;
+        document.getElementById("myModel").setAttribute('class', '')
+        document.getElementById("myModel").classList.add(x);
+      }
+    </script>
+    <script>
+      function changeAnimation() {
+        var x = document.getElementById("animationPicker").value;
+        document.getElementById("myModel").setAttribute('animation-name', '')
+        document.getElementById("myModel").setAttribute('animation-name', x);
+  } </script>
+
+    <div id="viewer"></div>
+
+    <script src="/viewer.js" type="module"></script>
+</body>
